@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cm7mg5251845c"]
 
-[ext_resource type="Script" path="res://Scenes/main_character.gd" id="1_64g7q"]
+[ext_resource type="Script" uid="uid://b2ieacnfqjh1i" path="res://Scenes/main_character.gd" id="1_64g7q"]
 [ext_resource type="Texture2D" uid="uid://dhnq6d315332y" path="res://Assets/kenney_new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_front.png" id="2_6lby2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6lby2"]
@@ -19,4 +19,5 @@ shape = SubResource("CapsuleShape2D_6lby2")
 texture = ExtResource("2_6lby2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-limit_enabled = false
+limit_bottom = 190
+limit_smoothed = true

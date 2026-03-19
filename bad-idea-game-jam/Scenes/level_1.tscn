@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://coe7m7gctnx1k"]
 
 [ext_resource type="Texture2D" uid="uid://dmdcwn54qhcgw" path="res://Assets/kenney_new-platformer-pack-1.1/Spritesheets/spritesheet-tiles-default.png" id="1_hbghi"]
-[ext_resource type="PackedScene" uid="uid://doijjay707loo" path="res://Scenes/MainCharacter.tscn" id="2_hn12h"]
+[ext_resource type="PackedScene" uid="uid://cm7mg5251845c" path="res://Scenes/MainCharacter.tscn" id="2_hn12h"]
 [ext_resource type="PackedScene" uid="uid://cvbov2h3hc2t6" path="res://Scenes/killzone.tscn" id="3_xfk5q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ffim"]
@@ -4924,7 +4924,8 @@ size = Vector2(1743, 20)
 [node name="Level_1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_hn12h")]
-position = Vector2(63, -67)
+position = Vector2(-9, -101)
+jump_velocity = -600.0
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD+/wAAAwALAAkAAAD//wAAAwALAAkAAAAAAAAAAwALAAkAAAABAAAAAwALAAkAAAACAAAAAwALAAkAAAADAAAAAwALAAkAAAAEAAAAAwALAAkAAAAFAAAAAwALAAkAAAAGAAAAAwALAAkAAAAHAAAAAwALAAkAAAAIAAAAAwAGAAoAAAAJAAAAAwAHAAoAAAD+/wEAAwAIAAkAAAD+/wIAAwAIAAkAAAD//wEAAwAIAAkAAAD//wIAAwAIAAkAAAAAAAEAAwAIAAkAAAAAAAIAAwAIAAkAAAABAAEAAwAIAAkAAAABAAIAAwAIAAkAAAACAAEAAwAIAAkAAAACAAIAAwAIAAkAAAADAAEAAwAIAAkAAAADAAIAAwAIAAkAAAAEAAEAAwAIAAkAAAAEAAIAAwAIAAkAAAAFAAEAAwAIAAkAAAAFAAIAAwAIAAkAAAAGAAEAAwAIAAkAAAAGAAIAAwAIAAkAAAAHAAEAAwAIAAkAAAAHAAIAAwAIAAkAAAAIAAEAAwAIAAkAAAAIAAIAAwAIAAkAAAAJAAEAAwAIAAoAAAAJAAIAAwAIAAkAAAAKAAEAAwAGAAoAAAAKAAIAAwAIAAkAAAALAAEAAwAHAAoAAAALAAIAAwAIAAoAAAAMAAIAAwALAAkAAAAOAAAAAwADAAoAAAAPAAAAAwAEAAoAAAAEAP7/AwAEAAkAAAAFAP7/AwAEAAkAAAAGAP7/AwAEAAkAAAAHAP7/AwAEAAkAAAAIAP7/AwAEAAkAAAA=")
