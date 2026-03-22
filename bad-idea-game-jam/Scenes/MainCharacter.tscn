@@ -4,11 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://dhnq6d315332y" path="res://Assets/kenney_new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_front.png" id="2_6lby2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6lby2"]
-radius = 35.0
-height = 96.0
+radius = 29.0
+height = 94.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_64g7q")
+max_speed = 450.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 1
@@ -21,3 +22,13 @@ texture = ExtResource("2_6lby2")
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_bottom = 190
 limit_smoothed = true
+
+[node name="LedgeRayTop" type="RayCast2D" parent="."]
+position = Vector2(0, -29)
+target_position = Vector2(30, 0)
+collision_mask = 3
+
+[node name="LedgeRayBottom" type="RayCast2D" parent="."]
+position = Vector2(1, 26)
+target_position = Vector2(30, 0)
+collision_mask = 3
