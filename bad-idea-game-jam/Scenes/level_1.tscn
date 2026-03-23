@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://coe7m7gctnx1k"]
+[gd_scene load_steps=8 format=4 uid="uid://coe7m7gctnx1k"]
 
+[ext_resource type="PackedScene" uid="uid://65cq45sf2xuc" path="res://Scenes/checkpoint.tscn" id="1_7p6j4"]
 [ext_resource type="Texture2D" uid="uid://dmdcwn54qhcgw" path="res://Assets/kenney_new-platformer-pack-1.1/Spritesheets/spritesheet-tiles-default.png" id="1_hbghi"]
 [ext_resource type="PackedScene" uid="uid://cm7mg5251845c" path="res://Scenes/MainCharacter.tscn" id="2_hn12h"]
 [ext_resource type="PackedScene" uid="uid://cvbov2h3hc2t6" path="res://Scenes/killzone.tscn" id="3_xfk5q"]
@@ -493,3 +494,9 @@ position = Vector2(-229, 203)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(1510.75, 90)
 shape = SubResource("RectangleShape2D_7p6j4")
+
+[node name="Checkpoint" parent="." instance=ExtResource("1_7p6j4")]
+position = Vector2(1246, -300.00003)
+scale = Vector2(3.3146832, 3.0038567)
+
+[connection signal="body_entered" from="Checkpoint" to="Checkpoint" method="_on_body_entered"]

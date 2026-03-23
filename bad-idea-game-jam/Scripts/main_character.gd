@@ -31,6 +31,12 @@ var is_on_ledge = false
 @onready var ledge_ray_bottom: RayCast2D = $LedgeRayBottom
 
 #core
+func _ready() -> void:
+	if GameManager.last_checkpoint_pos != Vector2.ZERO: #Check for checkpoints
+		global_position = GameManager.last_checkpoint_pos
+	else:
+		GameManager.last_checkpoint_pos = global_position
+
 func _physics_process(delta: float) -> void:
 	update_timers(delta)
 	update_raycasts()
@@ -119,8 +125,7 @@ func handle_horizontal_movement(delta):
 	
 	# Always pushing velocity toward the direction
 	if direction:
-		velocity.x = move_toward(velocity.x, direction * max_speed, 
-		acceleration * delta)
+		velocity.x = move_toward(velocity.x, direction * max_speed, acceleration * delta)
 	if direction != 0:
 		facing_direction = sign(direction) #remember last direction
 
@@ -160,3 +165,12 @@ func handle_ledge_logic():
 	var dir = Input.get_axis("move_left", "move_right")
 	if Input.is_action_just_pressed("move_down") or (dir != 0 and dir != facing_direction):
 		is_on_ledge = false
+
+func die():
+	set_physics_process(false)
+	await get_tree().create_timer(0.5).timeout
+	await FadeLayer.fade_to_black()
+	await get_tree().create_timer(0.5).timeout
+	get_tree().call_deferred("reload_current_scene")
+	await get_tree().process_frame
+	FadeLayer.fade_in() 
