@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d8si22ibuyp"]
+
+[ext_resource type="Texture2D" uid="uid://b2rn22ggrbfsd" path="res://Assets/kenney_new-platformer-pack-1.1/Vector/Tiles/block_planks.svg" id="1_q4ute"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pmoa"]
+size = Vector2(60, 59)
+
+[node name="Boxes" type="RigidBody2D"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_q4ute")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_2pmoa")

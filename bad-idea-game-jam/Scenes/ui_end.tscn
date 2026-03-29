@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://v2sn7ysqgjns"]
+
+[ext_resource type="FontFile" uid="uid://placx6thyoyp" path="res://Assets/font/SpecialElite-Regular.ttf" id="1_wdmxu"]
+
+[node name="UI_End" type="CanvasLayer"]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08468992, 0.08468992, 0.08468992, 1)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_wdmxu")
+theme_override_font_sizes/font_size = 45
+text = "THANKS FOR PLAYING"
+horizontal_alignment = 1
+vertical_alignment = 1

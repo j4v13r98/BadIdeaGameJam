@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3jap001xfuei"]
+
+[ext_resource type="Script" uid="uid://c05g124aur2n0" path="res://Scripts/packing_tape.gd" id="1_6w4r1"]
+[ext_resource type="Texture2D" uid="uid://rb5qm0srp4dt" path="res://Assets/kenney_new-platformer-pack-1.1/Sprites/Tiles/Double/heart.png" id="2_l65l6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_60d5p"]
+radius = 35.468296
+
+[node name="PackingTape" type="Area2D"]
+script = ExtResource("1_6w4r1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_l65l6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_60d5p")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

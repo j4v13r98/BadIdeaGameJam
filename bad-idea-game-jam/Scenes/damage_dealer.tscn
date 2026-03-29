@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl0stwkksb4ig"]
+
+[ext_resource type="Script" uid="uid://drsuwuxdv2lbp" path="res://Scripts/damage_dealer.gd" id="1_5r766"]
+
+[node name="DamageDealer" type="Area2D"]
+script = ExtResource("1_5r766")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
